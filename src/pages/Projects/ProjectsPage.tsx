@@ -66,8 +66,8 @@ export default function ProjectsPage() {
               </td>
               <td className="tw-hidden tw-max-w-56 tw-py-4 tw-pr-8 lg:tw-table-cell">
                 <ul className="tw-flex tw-flex-wrap tw-gap-2">
-                  {project.tags?.map((tag) => (
-                    <li>
+                  {project.tags?.map((tag, index) => (
+                    <li key={index}>
                       <TagChip tag={tag} />
                     </li>
                   ))}
