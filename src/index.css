@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.animated-link {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+
+  /* Default gray; to make link seem unselected */
+  @apply tw-text-slate-500;
+}
+
+.animated-link:before {
+  content: "";
+  position: absolute;
+  @apply tw-bg-slate-300;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+/* When link is being hovered, make the text a little brighter to show it as selected */
+.animated-link:hover {
+  @apply tw-text-slate-300;
+}
+
+/* When link is being hovered, we want to animate the line transition */
+.animated-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.animated-link-active {
+  @apply tw-text-slate-300;
+}
+.animated-link-active::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
