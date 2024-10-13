@@ -1,5 +1,5 @@
-import { projectList } from "../../data/projectList";
-import { experienceList } from "../../data/experienceList";
+import { resumeUrl, projectList, experienceList } from "../../data";
+
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
 import { GrLinkNext } from "react-icons/gr";
@@ -29,12 +29,12 @@ export default function MainPanel({
           <p>
             Currently, I'm still studying Computer Science. Outside of school, I
             build personal projects to expand and refine my skills. I have
-            experience working in languages such as JavaScript, C++, and Python.
-            I also have some experience designing and working with SQL and NoSQL
-            databases as well. While I have experience in full-stack
-            development, my current focus is on enhancing my backend development
-            capabilities. This is in hopes of achieving my dream job, which is
-            to join the US Digital Corp.
+            experience working in languages such as TypeScript, Java, C++, and
+            Python. I also have some experience designing and working with SQL
+            and NoSQL databases as well. While I have experience in full-stack
+            development, I'm trying to get experience to which field is best for
+            me. In terms of career goals, I dream of a job where I'm able to
+            serve some higher purpose, and feel like my work was meaning.
           </p>
 
           <p>
@@ -69,7 +69,7 @@ export default function MainPanel({
         </ul>
 
         <a
-          href="https://docs.google.com/document/d/1TORcs83dkz2IwKEaFk3yEiA2P3FAK4T6Ua3q-nrfVys/edit?usp=sharing"
+          href={resumeUrl}
           target="_blank"
           className="tw-flex tw-w-fit tw-items-center tw-gap-x-2 tw-font-semibold hover:tw-text-slate-400">
           <span>View Full Resume</span>

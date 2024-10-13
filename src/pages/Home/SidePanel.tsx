@@ -1,15 +1,16 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { linkedInUrl, githubUrl } from "../../data";
 
 const socialLinks = [
   {
     icon: <FaGithub />,
-    href: "https://github.com/Knguyen-dev",
+    href: githubUrl,
     ariaLabel: "Open Kevin Nguyen's Github profile in a new tab",
   },
   {
     icon: <FaLinkedin />,
-    href: "https://www.linkedin.com/in/kevin-nguyen-13313b298/",
+    href: linkedInUrl,
     ariaLabel: "Open Kevin Nguyen's LinkedIn profile in a new tab",
   },
 ];
@@ -67,7 +68,7 @@ export default function SidePanel({
           <li key={index}>
             <a
               target="_blank"
-              rel="norefferer"
+              rel="noreferrer"
               className="tw-text-3xl tw-text-slate-400 hover:tw-text-slate-300"
               aria-label={linkObj.ariaLabel}
               href={linkObj.href}>

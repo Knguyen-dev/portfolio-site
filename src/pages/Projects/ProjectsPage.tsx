@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { projectList } from "../../data/projectList";
+import { projectList } from "../../data";
 import TagChip from "../Home/TagChip";
 
 export default function ProjectsPage() {
