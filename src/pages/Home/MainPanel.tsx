@@ -32,9 +32,10 @@ export default function MainPanel({
             experience working in languages such as TypeScript, Java, C++, and
             Python. I also have some experience designing and working with SQL
             and NoSQL databases as well. While I have experience in full-stack
-            development, I'm trying to get experience to which field is best for
-            me. In terms of career goals, I dream of a job where I'm able to
-            serve some higher purpose, and feel like my work was meaning.
+            development, I'm still trying to get experience to see which field
+            is best for me. In terms of career goals, I dream of a job where I'm
+            able to serve some higher purpose, and feel like my work is
+            meaningful.
           </p>
 
           <p>
