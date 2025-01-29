@@ -9,14 +9,6 @@ import { IProject } from "./types/IProject";
  * Single source of truth in this case.
  */
 
-export const resumeUrl: string =
-  "https://docs.google.com/document/d/1NBrCtHgY4vvicPOdYBR7mo-Alf07Z7h4bsf_a5IeeNo/edit?usp=sharing";
-
-export const linkedInUrl =
-  "https://www.linkedin.com/in/kevin-nguyen-13313b298/";
-
-export const githubUrl = "https://github.com/Knguyen-dev/";
-
 export const experienceList: IExperience[] = [
   {
     dateRange: "August 2022 - May 2024",
@@ -95,8 +87,8 @@ export const projectList: IProject[] = [
   {
     startDate: new Date("2023-12-20"),
     endDate: new Date("2024-01-11"),
-    title: "GamerCity - Videogame Store",
-    description: `A React application that imitates an ecommerce website. Here the user is shopping for video games at the company "GamerCity"!`,
+    title: "GamerCity - Video game Store",
+    description: `A React application that imitates an e-commerce website. Here the user is shopping for video games at the company "GamerCity"!`,
     madeFor: "Personal Project",
     tags: ["React", "JavaScript"],
     repoUrl: "https://github.com/Knguyen-dev/Shopping-Cart-App",

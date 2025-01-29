@@ -1,16 +1,15 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { linkedInUrl, githubUrl } from "../../data";
 
 const socialLinks = [
   {
     icon: <FaGithub />,
-    href: githubUrl,
+    href: import.meta.env.VITE_GITHUB_URL,
     ariaLabel: "Open Kevin Nguyen's Github profile in a new tab",
   },
   {
     icon: <FaLinkedin />,
-    href: linkedInUrl,
+    href: import.meta.env.VITE_LINKEDIN_URL,
     ariaLabel: "Open Kevin Nguyen's LinkedIn profile in a new tab",
   },
 ];
