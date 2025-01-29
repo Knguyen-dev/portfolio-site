@@ -28,7 +28,7 @@ export default function HomePage() {
       const scrollPosition = window.scrollY;
 
       /**
-       * - If our scroll position is greater than or equal to the about section, hten
+       * - If our scroll position is greater than or equal to the about section, then
        *   it's at the top or beyond the about section. Then we check that it's less
        *   than the experience page, so the position is still above the experiences section.
        * NOTE: So this logic is similar for the rest

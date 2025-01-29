@@ -1,4 +1,4 @@
-import { resumeUrl, projectList, experienceList } from "../../data";
+import { projectList, experienceList } from "../../data";
 
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
@@ -70,7 +70,7 @@ export default function MainPanel({
         </ul>
 
         <a
-          href={resumeUrl}
+          href={import.meta.env.VITE_RESUME_URL}
           target="_blank"
           className="tw-flex tw-w-fit tw-items-center tw-gap-x-2 tw-font-semibold hover:tw-text-slate-400">
           <span>View Full Resume</span>
