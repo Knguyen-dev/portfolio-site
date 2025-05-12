@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { projectList } from "../../data";
 import TagChip from "../Home/TagChip";
-
+import { useOutletContext } from "react-router-dom";
+import { OutletContextType } from "../../types";
 export default function ProjectsPage() {
-  const sortedProjectList = projectList.sort((a, b) => {
-    const yearA = a.startDate.getFullYear();
-    const yearB = b.startDate.getFullYear();
+
+  const {data} = useOutletContext<OutletContextType>()
+
+  
+  const sortedProjects = data.projects.sort((a, b) => {
+
+    const yearA = new Date(a.dates.start).getFullYear()
+
+    // If undefined, insert date for now?
+    const yearB = new Date(b.dates.end || Date.now()).getFullYear()
 
     // Sort in descending order, so the earliest projects are rendered on top
     return yearB - yearA;
@@ -49,12 +56,12 @@ export default function ProjectsPage() {
         </thead>
 
         <tbody>
-          {sortedProjectList.map((project, index) => (
+          {sortedProjects.map((project, index) => (
             <tr
               key={index}
               className="tw-border-b tw-border-slate-300/10 tw-align-top">
               <td className="tw-py-4 tw-pr-8 tw-text-slate-400">
-                {project.startDate.getFullYear()}
+                {new Date(project.dates.start).getFullYear()}
               </td>
               <td className="tw-max-w-36 tw-py-4 tw-pr-8 tw-font-semibold">
                 {project.title}
@@ -75,7 +82,7 @@ export default function ProjectsPage() {
               </td>
               <td className="tw-hidden tw-py-4 tw-pr-8 sm:tw-table-cell">
                 <a
-                  href={project.repoUrl}
+                  href={project.link}
                   className="tw-text-blue-500 hover:tw-underline"
                   target="_blank"
                   rel="noopener noreferrer">
