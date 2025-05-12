@@ -1,15 +1,19 @@
 import { GrLinkNext } from "react-icons/gr";
-import { IProject } from "../../types/IProject";
-import { formatStartAndEndDates } from "../../api/Intl";
 
+import { formatStartAndEndDates } from "../../api/Intl";
+import { Project } from "../../types";
 interface IProjectCardProps {
-  projectObj: IProject;
+  projectObj: Project;
 }
 
 export default function ProjectCard({ projectObj }: IProjectCardProps) {
+
+  const startDate = new Date(projectObj.dates.start)
+  const endDate = new Date(projectObj.dates.end || Date.now())
+
   return (
     <a
-      href={projectObj.repoUrl}
+      href={projectObj.link}
       className="tw-block tw-rounded tw-p-4 tw-transition-all hover:tw-bg-slate-800/50 hover:tw-shadow-[0_4px_6px_rgba(0,0,0,0.1),inset_0_1px_0_0_rgba(148,163,184,0.1)]"
       aria-label={`Open github repo for project titled '${projectObj.title}' in another tab.`}
       target="_blank"
@@ -22,7 +26,7 @@ export default function ProjectCard({ projectObj }: IProjectCardProps) {
           </div>
 
           <h2 className="tw-text-xs tw-uppercase tw-tracking-widest tw-text-slate-400">
-            {formatStartAndEndDates(projectObj.startDate, projectObj.endDate)}
+            {formatStartAndEndDates(startDate, endDate)}
           </h2>
         </header>
 
