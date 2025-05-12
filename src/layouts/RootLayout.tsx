@@ -20,7 +20,7 @@ export default function RootLayout() {
   }, [pathname]);
 
 
-  // You'd want to cache this later I think
+  
   useEffect(() => {
     const getData = async () => {
       
@@ -59,7 +59,6 @@ export default function RootLayout() {
     }
     getData()
   }, [])
-
 
   if (loading) {
     return (

@@ -1,0 +1,8 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    # Nginx is by default port 80, so we do port mapping to access the app on 8080
+      - 8080:80
