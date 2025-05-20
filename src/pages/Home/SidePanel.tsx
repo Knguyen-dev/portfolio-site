@@ -6,7 +6,7 @@ import { OutletContextType } from "../../types";
 const socialLinks = [
   {
     icon: <FaGithub />,
-    href: "https://github.com/",
+    href: "https://github.com/Knguyen-dev",
     ariaLabel: "Open Kevin Nguyen's Github profile in a new tab",
   },
   {
