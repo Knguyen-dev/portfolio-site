@@ -3,16 +3,18 @@ import { FaLinkedin } from "react-icons/fa";
 import portfolioData from "../../data/portfolioData.json";
 import { APIData } from "../../types";
 
+
+
 const data = portfolioData as APIData;
 const socialLinks = [
   {
     icon: <FaGithub />,
-    href: "https://github.com/Knguyen-dev",
-    ariaLabel: "Open Kevin Nguyen's Github profile in a new tab",
+    href: data.githubLink,
+    ariaLabel: "Open Github profile in a new tab",
   },
   {
     icon: <FaLinkedin />,
-    href: "https://www.linkedin.com/in/kevin-nguyen-cs/",
+    href: data.linkedinLink,
     ariaLabel: "Open Kevin Nguyen's LinkedIn profile in a new tab",
   },
 ];
