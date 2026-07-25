@@ -53,7 +53,7 @@ export default function MainPanel({
         </ul>
 
         <a
-          href="https://docs.google.com/document/d/1NBrCtHgY4vvicPOdYBR7mo-Alf07Z7h4bsf_a5IeeNo/edit?tab=t.0"
+          href={data.resumeLink}
           target="_blank"
           className="tw-flex tw-w-fit tw-items-center tw-gap-x-2 tw-font-semibold hover:tw-text-slate-400">
           <span>View Full Resume</span>

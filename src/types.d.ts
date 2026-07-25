@@ -31,6 +31,7 @@ export interface APIData {
   header: string;
   subheader: string;
   about: string[];
+  resumeLink: string;
   experiences: Experience[];
   projects: Project[];
 } 

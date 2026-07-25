@@ -8,6 +8,8 @@
     "I'm interested in **open-source** (e.g., database engines, infrastructure, scientific computing), implementing research papers, embedded hardware, and graduate study. Feel free to connect with me via [LinkedIn](https://www.linkedin.com/in/kevin-nguyen-cs/) or email. I always like to learn what others are up to or building, so if you're building something cool or want to collaborate, don't hesitate to reach out! Other than that, good luck on your journey."
   ],
 
+  "resumeLink": "https://www.overleaf.com/read/mxhyfdwvttjt#0e7021",
+
   "experiences": [
     {
         "companyName": "Naval Surface Warfare Center Crane",
@@ -70,7 +72,7 @@
     },
     {
         "title": "Optical LED-Tracker for Aerial Systems",
-        "description": "Improved a communication system that used LED signaling and event-based sensors to work with moving vehicles (dynamic environment). For low-latency p2p drone messaging, I optimized the vision processing pipeline, reducing data overhead from over 10,000 points/sec to 500–1,000 signals and accelerating processing speed from 10+ seconds down to under 1 second per second of sensor data. This resulted in a 5ms average processing time with 94% identification accuracy, directly enabling real-time, autonomous drone coordination in RF-denied environments. To track the LED after losing line-of-sight, I integrated a Kalman Filter to predict its location.",
+        "description": "Improved a communication system that used LED signaling and event-based sensors to work with moving vehicles. For low-latency p2p drone messaging, I optimized the vision processing pipeline, reducing data overhead from over 10,000 points/sec to 500–1,000 signals and accelerating processing speed from 10+ seconds down to under 1 second per second of sensor data. This resulted in a 5ms average processing time with 94% identification accuracy, directly enabling real-time, autonomous drone coordination in RF-denied environments. To track the LED after losing line-of-sight, I integrated a Kalman Filter to predict its location.",
         "tags": [
             "Python",
             "C++",
@@ -116,7 +118,7 @@
             "start": "2025-03-12",
             "end": "2025-05-13"
         },
-        "madeFor": "CSCIB-351 | Intro to AI",
+        "madeFor": "CSCIB-351 Intro to AI",
         "link": "https://github.com/Knguyen-dev/MazeAI",
         "isFeatured": true
     },

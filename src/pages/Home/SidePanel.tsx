@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import portfolioData from "../../data/portfolioData.json";
-
+import { APIData } from "../../types";
 
 const data = portfolioData as APIData;
 const socialLinks = [
