@@ -1,4 +1,3 @@
-import { GrLinkNext } from "react-icons/gr";
 import { Experience } from "../../types";
 import {formatStartAndEndDates} from "../../api/Intl"
 

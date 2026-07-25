@@ -1,8 +1,9 @@
 import ReactMarkdown from "react-markdown";
+import type { RefObject } from "react";
+import { APIData } from "../../types";
 
-
-export default function AboutMe({data, aboutRef}) {
-    {/* About Me Section */}
+export default function AboutMe({data, aboutRef} : {data: APIData, aboutRef: RefObject<HTMLElement>}) {
+    // About Me Section
     return (
     <section id="about" ref={aboutRef}>
         <header>

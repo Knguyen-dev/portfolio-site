@@ -1,15 +1,15 @@
-import ReactMarkdown from "react-markdown"
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
 import AboutMe from "./AboutMe";
 import { GrLinkNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import { MutableRefObject } from "react";
+
 import { APIData } from "../../types";
 import portfolioData from "../../data/portfolioData.json";
+import { MutableRefObject, RefObject } from "react";
 
 interface IMainPanelProps {
-  aboutRef: MutableRefObject<null | HTMLElement>;
+  aboutRef: RefObject<HTMLElement>;
   experiencesRef: MutableRefObject<null | HTMLElement>;
   projectsRef: MutableRefObject<null | HTMLElement>;
 }
@@ -23,8 +23,6 @@ export default function MainPanel({
   experiencesRef,
   projectsRef,
 }: IMainPanelProps) {
-
-  // TODO: First place where data is used Import and use your data here
   return (
     <main className="tw-flex tw-flex-col tw-gap-y-24 lg:tw-w-1/2 lg:tw-py-24">
 
