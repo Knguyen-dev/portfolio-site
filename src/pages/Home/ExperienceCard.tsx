@@ -9,16 +9,8 @@ interface IExperienceCardProps {
 export default function ExperienceCard({
   experienceObj,
 }: IExperienceCardProps) {
-
-
-  let startDate = new Date(experienceObj.dates.start)
-  let endDate;
-  if (experienceObj.dates.end) {
-    endDate = new Date(experienceObj.dates.end)
-  } else {
-    endDate = new Date(Date.now())
-  }
-
+  const startDate = new Date(experienceObj.dates.start)
+  const endDate = experienceObj.dates.end ? new Date(experienceObj.dates.end) : undefined;
   return (
     <a
       href={experienceObj.link}
@@ -26,16 +18,21 @@ export default function ExperienceCard({
       target="_blank"
       rel="noreferrer">
       <div>
-        <header className="tw-slate-500 tw-mb-3 tw-font-semibold">
-          <div className="tw-flex tw-items-center">
-            <h1 className="tw-mr-2">
-              {experienceObj.title}
+        <header className="tw-mb-3 tw-font-semibold">
+          {/* Top Row: Company Name on the left, Dates on the right */}
+          <div className="tw-flex tw-items-baseline tw-justify-between">
+            <h1 className="tw-text-lg tw-font-bold tw-text-white">
+              {experienceObj.companyName}
             </h1>
-            <GrLinkNext fontWeight="thin" />
+
+            <h2 className="tw-text-xs tw-uppercase tw-tracking-widest tw-text-slate-400">
+              {formatStartAndEndDates(startDate, endDate)}
+            </h2>
           </div>
 
-          <h2 className="tw-text-xs tw-uppercase tw-tracking-widest tw-text-slate-400">
-            {formatStartAndEndDates(startDate, endDate)}
+          {/* Bottom Row: Job Title below Company Name */}
+          <h2 className="tw-text-sm tw-font-normal tw-text-slate-400 tw-mt-0.5">
+            {experienceObj.title}
           </h2>
         </header>
 

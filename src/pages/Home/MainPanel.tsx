@@ -1,10 +1,12 @@
-
+import ReactMarkdown from "react-markdown"
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
+import AboutMe from "./AboutMe";
 import { GrLinkNext } from "react-icons/gr";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MutableRefObject } from "react";
-import { OutletContextType } from "../../types";
+import { APIData } from "../../types";
+import portfolioData from "../../data/portfolioData.json";
 
 interface IMainPanelProps {
   aboutRef: MutableRefObject<null | HTMLElement>;
@@ -12,26 +14,22 @@ interface IMainPanelProps {
   projectsRef: MutableRefObject<null | HTMLElement>;
 }
 
+
+const data = portfolioData as APIData;
+
+
 export default function MainPanel({
   aboutRef,
   experiencesRef,
   projectsRef,
 }: IMainPanelProps) {
-  const { data } = useOutletContext<OutletContextType>()
+
+  // TODO: First place where data is used Import and use your data here
   return (
     <main className="tw-flex tw-flex-col tw-gap-y-24 lg:tw-w-1/2 lg:tw-py-24">
-      {/* About Me Section */}
-      <section id="about" ref={aboutRef}>
-        <header>
-          <h1 className="tw-mb-2 tw-text-xl tw-font-bold">About Me</h1>
-        </header>
 
-        <div className="tw-text-md tw-flex tw-flex-col tw-gap-y-2 tw-text-slate-400">
-          {data.about.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </div>
-      </section>
+      {/* About Me Section */}
+      <AboutMe aboutRef={aboutRef} data={data}/>  
 
       {/* Professional Experiences Section */}
       <section id="experiences" ref={experiencesRef}>
@@ -63,6 +61,7 @@ export default function MainPanel({
         </a>
       </section>
 
+      {/* Featured Projects Section */}
       <section id="projects" ref={projectsRef}>
         <header>
           <h1 className="tw-text-xl tw-font-semibold">Projects</h1>

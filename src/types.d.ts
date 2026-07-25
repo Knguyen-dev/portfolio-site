@@ -5,6 +5,7 @@ export interface DateRange {
 
 // Could we used for a job experience or just a project that you worked on
 export interface Experience {
+  companyName: string;
   title: string;
   description: string;
   dates: DateRange;

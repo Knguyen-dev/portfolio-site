@@ -22,7 +22,7 @@ export default function HomePage() {
 
       /**
        * NOTE: Returns the current vertical scroll position of the window, measured from hte
-       * top of hte viewport to the top of the document. So this just represents
+       * top of the viewport to the top of the document. So this just represents
        * hwo many pixels the document has been scrolled vertically.
        */
       const scrollPosition = window.scrollY;

@@ -1,0 +1,253 @@
+{
+  "name": "Kevin Nguyen",
+  "header": "Software Engineer",
+  "subheader": "Building high-performance systems & backend systems.",
+  "about": [
+    "I'm a Software Engineer & **DoD SMART Scholar** based in Bloomington, IN. At Indiana University, I designed and deployed full-stack, real-time systems supporting 300+ researchers across 25+ institutions. I was also a research assistant at an **Aerospace Systems Lab**, where I developed low-latency vision sensor pipelines and physics simulations for autonomous aerial robotics. I currently work on mission-critical software and systems programming at **NSWC Crane**.",
+    "I'm involved in two main areas. First is **Web-Development**. I've built and full-stack platforms with DevOps infrastructure for research and other domains. I've studied distributed systems and system design case studies to design scalable, fault-tolerant backend architectures. The second is **Systems Programming**. I'm talking about low-level C/C++, computer architecture, operating systems, and network programming. Focused on low-latency, high-throughput, performant systems.",
+    "I'm interested in **open-source** (e.g., database engines, infrastructure, scientific computing), implementing research papers, embedded hardware, and graduate study. Feel free to connect with me via [LinkedIn](https://www.linkedin.com/in/kevin-nguyen-cs/) or email. I always like to learn what others are up to or building, so if you're building something cool or want to collaborate, don't hesitate to reach out! Other than that, good luck on your journey."
+  ],
+
+  "experiences": [
+    {
+        "companyName": "Naval Surface Warfare Center Crane",
+        "title": "Software Engineer / Computer Scientist",
+        "description": "Designing and contributing to classified military and mission critical systems. Other than that it's NDA.",
+        "dates": {
+            "start": "2026-08-10",
+            "end": null
+        },
+        "link": "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Crane/"
+    },
+    {
+        "companyName": "Aerospace Systems Lab at IU",
+        "title": "Research Assistant",
+        "description": "Improved a optical communication system for autonomous aerial robotics that uses high-speed LED signaling and event-based vision sensors. I optimized a vision processing pipeline, reducing latency and increasing throughput, to allow for real-time drone-to-drone communication. In parallel, I built a physics simulation to model lighter-than-air (LTA) autonomous vehicles, accurately computing thruster forces, torques, angular accelerations, angular velocities, and quaternion-based orientations. I co-authored a research paper detailing the simulation models, which was accepted and presented at AIAA SciTech.",
+        "dates": {
+            "start": "2025-08-25",
+            "end": "2026-05-13"
+        },
+        "link": "https://aerosyslab.com/"
+    },
+    {
+      "companyName": "Indiana University",
+      "title": "Software Engineer Intern",
+      "description": "Built and deployed a scalable full-stack simulation platform (Python, React, MySQL) serving over 300 researchers across 25+ institutions to support remote scientific computation, data visualization, and persistent storage. To manage compute-intensive operations, I designed an asynchronous job processing system utilizing Python multi-threading and client-side polling that handles tasks ranging from immediate execution to 20-minute computational runs with real-time status updates. The entire platform was containerized with Docker and integrated into CI/CD pipelines with automated health checks and rolling updates, guaranteeing zero-downtime releases.",
+      "dates": {
+        "start": "2024-12-15",
+        "end": "2026-05-13"
+      },
+      "link": "https://js2-gateway.ear180013.projects.jetstream-cloud.org/"
+    },
+    {
+      "companyName": "Infosys Limited",
+      "title": "Software Engineer Intern",
+      "description": "Created a RESTful API designed for stream and batch processing, automating sensitive document review and PII redaction for internal client workflows. By deploying custom PII detection models achieving 90% recall across 6+ sensitive data types, the system cut document processing times from 10 minutes to just 3 seconds, enabling seamless scaling for 100+ daily documents. The engine also automatically generates detailed audit trails and post-processing verification metadata to ensure strict compliance standards.",
+      "dates": {
+        "start": "2025-06-02",
+        "end": "2025-07-28"
+      },
+      "link": "https://www.infosys.com/"
+    }
+  ],
+  "projects": [
+    {
+        "title": "High Performance Linux Network Server",
+        "description": "A single-threaded, low-latency, C++20 network server utilizing non-blocking I/O and edge-triggered epoll to reliably handle 25,000 concurrent connections. To maximize CPU cache locality, I structured the data architecture using a cache-friendly Struct-of-Arrays (SoA) layout, which reduced fan-out latency by 7–8.5%. Additionally, I designed and implemented a lightweight binary TCP protocol capable of broadcasting messages to 10,000 active client connections in just 89ms.",
+        "tags": [
+            "C++",
+            "Network Programming",
+            "Performance Engineering",
+            "Operating Systems"
+        ],
+        "dates": {
+            "start": "2026-03-10",
+            "end": "2026-06-02"
+        },
+        "madeFor": "CSCIP-434 Distributed Systems",
+        "link": "https://github.com/Knguyen-dev/TCP-Chat-Server",
+        "isFeatured": true
+    },
+    {
+        "title": "Optical LED-Tracker for Aerial Systems",
+        "description": "Improved a communication system that used LED signaling and event-based sensors to work with moving vehicles (dynamic environment). For low-latency p2p drone messaging, I optimized the vision processing pipeline, reducing data overhead from over 10,000 points/sec to 500–1,000 signals and accelerating processing speed from 10+ seconds down to under 1 second per second of sensor data. This resulted in a 5ms average processing time with 94% identification accuracy, directly enabling real-time, autonomous drone coordination in RF-denied environments. To track the LED after losing line-of-sight, I integrated a Kalman Filter to predict its location.",
+        "tags": [
+            "Python",
+            "C++",
+            "Pandas",
+            "Numpy",
+            "OpenCV",
+            "Machine Learning"
+        ],
+        "dates": {
+            "start": "2025-08-12",
+            "end": "2025-12-13"
+        },
+        "madeFor": "Aerospace Systems Lab | Indiana University",
+        "link": "https://github.com/Knguyen-dev/led-tracker.git",
+        "isFeatured": true
+
+    },
+    {
+        "title": "URL Shortener",
+        "description": "Built a scalable URL shortening service for high write throughput, data integrity, and secure link management using FastAPI, PostgreSQL, Redis, and Cassandra. To optimize storage performance under heavy traffic, I implemented a Redis write-batching strategy that flushed click counters in batches, reducing overall database write load by 5x while slashing session retrieval latency from 100ms down to 15–30ms via aggressive caching. The platform’s infrastructure was further hardened with session-based authentication, role-based access controls, and comprehensive server-side input validation.",
+        "tags": [
+            "Python",
+            "PostgreSQL",
+            "Redis",
+            "Apache Cassandra"
+        ],
+        "dates": {
+            "start": "2025-07-10",
+            "end": "2025-08-05"
+        },
+        "madeFor": "Personal",
+        "link": "https://github.com/Knguyen-dev/url-shortener",
+        "isFeatured": true
+    },
+    {
+        "title": "Maze AI",
+        "description": "A performant visualization engine in Python to simulate and benchmark maze generation and pathfinding algorithms. The grid representation uses optimized NumPy structures and bitwise flags for cell wall-state encoding, achieving a 90% reduction in memory allocation. Doubled rendering throughput by developing a rendering algorithm that eliminated full-frame redraws in favor of updating only modified grid segments during execution loops. Also has a custom execution profiler that tracks time, memory overhead, and state-expansion efficiency to facilitate deep-dive algorithmic analysis.",
+        "tags": [
+            "Python",
+            "Data Structures & Algorithms"
+        ],
+        "dates": {
+            "start": "2025-03-12",
+            "end": "2025-05-13"
+        },
+        "madeFor": "CSCIB-351 | Intro to AI",
+        "link": "https://github.com/Knguyen-dev/MazeAI",
+        "isFeatured": true
+    },
+    {
+      "title": "Blog Platform",
+      "description": "A full-stack blogging platform built with React, TypeScript, Express.js, and MongoDB. A WYSIWYG editor allows writers to preview real-time Markdown rendering as they draft articles. Redis and Cloudinary CDN for media assets reduced content delivery latency from 100ms to under 30ms while significantly lowering server load. For security, we implemented JWT authentication, role-based access control, rate limiting, XSS input sanitization, and automated password recovery workflows via the SendGrid API.",
+      "tags": [
+        "TypeScript",
+        "React",
+        "Express.js",
+        "MongoDB",
+        "Redis"
+      ],
+      "dates": {
+        "start": "2024-02-12",
+        "end": "2024-08-26"
+      },
+      "madeFor": "Personal Project",
+      "link": "https://github.com/Knguyen-dev/Blog-API",
+      "isFeatured": true
+    },
+    
+    
+
+
+    {
+      "title": "Book Library - Console",
+      "description": "C++ console app to manage a university library with custom data structures (hashmap, linked list) and algorithms (merge sort).",
+      "tags": [
+        "C++",
+        "Data Structures and Algorithms"
+      ],
+      "dates": {
+        "start": "2023-07-01",
+        "end": "2023-07-31"
+      },
+      "madeFor": "Course Work",
+      "link": "https://github.com/Knguyen-dev/Book-Library-Console.git",
+      "isFeatured": false
+    },
+    {
+      "title": "AI-Powered Story Writer",
+      "description": "Python GUI app that helps users write stories with AI. I handled all database interaction logic in this team project.",
+      "tags": [
+        "Python",
+        "SQL",
+        "Tkinter GUI"
+      ],
+      "dates": {
+        "start": "2023-08-01",
+        "end": "2023-12-31"
+      },
+      "madeFor": "Course Work",
+      "link": "https://github.com/Knguyen-dev/SDEV-265-Group-4",
+      "isFeatured": false
+    },
+    {
+      "title": "Kroger Ecommerce App",
+      "description": "Python GUI supermarket app allowing users to register, login, add items to cart, and check out.",
+      "tags": [
+        "Python",
+        "SQL",
+        "Tkinter GUI"
+      ],
+      "dates": {
+        "start": "2023-03-01",
+        "end": "2023-05-31"
+      },
+      "madeFor": "Course Work",
+      "link": "https://github.com/Knguyen-dev/SDEV_220_Final_Project_TeamBlue_Nguyen.git",
+      "isFeatured": false
+    },
+    {
+      "title": "GamerCity - Video game Store",
+      "description": "React-based e-commerce mockup where users shop for video games online at GamerCity.",
+      "tags": [
+        "React",
+        "JavaScript"
+      ],
+      "dates": {
+        "start": "2023-12-20",
+        "end": "2024-01-11"
+      },
+      "madeFor": "Personal Project",
+      "link": "https://github.com/Knguyen-dev/Shopping-Cart-App",
+      "isFeatured": false
+    },
+    {
+      "title": "Memory Card Game - Video Game Edition",
+      "description": "React memory game where players must avoid picking the same video game twice.",
+      "tags": [
+        "React",
+        "JavaScript"
+      ],
+      "dates": {
+        "start": "2023-11-17",
+        "end": "2023-11-28"
+      },
+      "madeFor": "Personal Project",
+      "link": "https://github.com/Knguyen-dev/Memory-Game.git",
+      "isFeatured": false
+    },
+    {
+      "title": "Resume Builder",
+      "description": "A React app that lets users build a resume with live-preview of changes.",
+      "tags": [
+        "React",
+        "JavaScript"
+      ],
+      "dates": {
+        "start": "2023-10-10",
+        "end": "2023-11-18"
+      },
+      "madeFor": "Personal Project",
+      "link": "https://github.com/Knguyen-dev/CV-Application.git",
+      "isFeatured": false
+    },
+    {
+      "title": "Weather App",
+      "description": "JavaScript app that shows weather forecasts for searched locations using an API.",
+      "tags": [
+        "JavaScript",
+        "API"
+      ],
+      "dates": {
+        "start": "2023-07-30",
+        "end": "2023-11-04"
+      },
+      "madeFor": "Personal Project",
+      "link": "https://github.com/Knguyen-dev/simple-weather-app",
+      "isFeatured": false
+    }
+  ]
+}
