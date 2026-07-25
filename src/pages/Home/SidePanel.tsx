@@ -1,8 +1,9 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { useOutletContext } from "react-router-dom";
-import { OutletContextType } from "../../types";
+import portfolioData from "../../data/portfolioData.json";
+import { APIData } from "../../types";
 
+const data = portfolioData as APIData;
 const socialLinks = [
   {
     icon: <FaGithub />,
@@ -36,11 +37,6 @@ export default function SidePanel({
 }: {
   activeLinkIndex: undefined | number;
 }) {
-
-  // Get the context
-  const { data } = useOutletContext<OutletContextType>()
-
-
 
   return (
     <div className="tw-mb-8 tw-flex tw-flex-col tw-gap-y-8 lg:tw-sticky lg:tw-top-0 lg:tw-max-h-screen lg:tw-w-1/2 lg:tw-gap-y-16 lg:tw-py-24">

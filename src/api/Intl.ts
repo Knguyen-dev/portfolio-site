@@ -12,6 +12,8 @@ const formatStartAndEndDates = (startDate: Date, endDate?: Date) => {
   let formattedDateString = formatDateToString(startDate);
   if (endDate) {
     formattedDateString += ` - ${formatDateToString(endDate)}`;
+  } else {
+    formattedDateString += "- Present";
   }
   return formattedDateString;
 };

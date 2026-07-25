@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import TagChip from "../Home/TagChip";
-import { useOutletContext } from "react-router-dom";
-import { OutletContextType } from "../../types";
+
+import portfolioData from "../../data/portfolioData.json";
+import { APIData } from "../../types";
+
+const data = portfolioData as APIData;
+
 export default function ProjectsPage() {
 
-  const {data} = useOutletContext<OutletContextType>()
+  // Third and last place where data is used.
 
   
   const sortedProjects = data.projects.sort((a, b) => {
@@ -26,12 +30,9 @@ export default function ProjectsPage() {
           to="/"
           className="tw-flex tw-w-fit tw-items-center tw-gap-x-2 tw-font-semibold hover:tw-text-slate-400">
           <FaArrowLeftLong />
-          <span>Back to Kevin Nguyen</span>
+          <span>Kevin Nguyen</span>
         </Link>
         <h1 className="tw-text-xl tw-font-bold lg:tw-text-5xl">All Projects</h1>
-        <h2 className="tw-mt-2 tw-text-slate-400 lg:tw-w-1/3">
-          A list of all of my projects, rather than just the featured ones.
-        </h2>
       </header>
 
       <table className="tw-mt-12 tw-w-full tw-border-collapse tw-text-left">

@@ -7,10 +7,8 @@ interface IProjectCardProps {
 }
 
 export default function ProjectCard({ projectObj }: IProjectCardProps) {
-
   const startDate = new Date(projectObj.dates.start)
-  const endDate = new Date(projectObj.dates.end || Date.now())
-
+  const endDate = projectObj.dates.end ? new Date(projectObj.dates.end) : undefined;
   return (
     <a
       href={projectObj.link}
